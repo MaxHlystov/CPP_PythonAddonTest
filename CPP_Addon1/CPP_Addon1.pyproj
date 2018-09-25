@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>CPP_Addon1</Name>
     <RootNamespace>CPP_Addon1</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +24,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CPP_Addon1.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\superfastcode\superfastcode.vcxproj">
+      <Name>superfastcode</Name>
+      <Project>{710c7255-83c3-4c7e-a6c3-26173110fc7c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
